@@ -11,7 +11,6 @@ public class Employee {
   private double increasePercentage;
 
   public Employee() {
-
   }
 
   public Employee(String n, String sn, String num) {
@@ -104,8 +103,6 @@ public class Employee {
         "\nEmployee Number: " + empNumber +
         "\nEmployee Salary: R" + empSalary +
         "\nNew Salary: R" + newSalary);
-
-    
 
   }
 }
