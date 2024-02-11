@@ -25,7 +25,7 @@ public class Main {
         "\nEmployee Salary: R" + empSalary +
         "\nNew Salary: R" + newSalary);
 
-    Employee employeeInstance = new Employee();
+    Employee employeeInstanceClass = new Employee();
   }
 
 }
