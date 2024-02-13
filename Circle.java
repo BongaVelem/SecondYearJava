@@ -1,5 +1,5 @@
 public class Circle {
-  private double radius;
+  private Double radius;
 
   public Circle() {
 
@@ -20,17 +20,25 @@ public class Circle {
   }
 
   public double getDiameter() {
-    return 2 * radius;
+    return 2 * getRadius();
 
   }
 
   public double getCircumference() {
-    return 2 * Math.PI * radius;
+    return 2 * Math.PI * getRadius();
 
   }
 
   public double getArea() {
-    return Math.PI * Math.pow(radius, 2);
+    return Math.PI * Math.pow(getRadius(), 2);
+
+  }
+
+  public String toString() {
+    return "Radius: " + this.getRadius() +
+        "\nDiameter: " + this.getDiameter() +
+        "\nCircumference: " + this.getCircumference() +
+        "\nArea of a Circle: " + this.getArea();
 
   }
 }
