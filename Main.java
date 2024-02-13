@@ -1,60 +1,50 @@
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class Main {
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    String input;
 
-    System.out.print("Name: ");
-    String name = scanner.nextLine();
+    String name = JOptionPane.showInputDialog("Please enter Employee 1 Name: ");
 
-    System.out.print("Surname: ");
-    String surname = scanner.nextLine();
+    String surname = JOptionPane.showInputDialog("Please enter Employee 1 Surname: ");
 
-    System.out.print("Number: ");
-    String number = scanner.nextLine();
+    String number = JOptionPane.showInputDialog("Please enter Employee 1 Number: ");
 
-    System.out.print("Salary: ");
-    Double salary = scanner.nextDouble();
+    input = JOptionPane.showInputDialog("PLease enter your Employee 1 salary: ");
+    double salary = Double.parseDouble(input);
 
-    System.out.print("Salary Increase % : ");
-    Double salaryIncrease = scanner.nextDouble();
+    input = JOptionPane.showInputDialog("PLease enter increase percentage: ");
+    double salaryIncrease = Double.parseDouble(input);
 
     Employee employee1 = new Employee(name, surname, number, salary);
-
-    System.out.print(" ");
-    System.out.println("=================Results 1: ===========");
-    System.out.print(" ");
     employee1.increaseSalary(salaryIncrease);
-    System.out.println(employee1.toString());
-    System.out.println();
-    System.out.println();
 
-    Scanner scanner1 = new Scanner(System.in);
+    String name2 = JOptionPane.showInputDialog("Please enter Employee 2 Name: ");
 
-    System.out.print("Name2: ");
-    String name2 = scanner1.nextLine();
+    String surname2 = JOptionPane.showInputDialog("Please enter Employee 2 Surname: ");
 
-    System.out.print("Surname2: ");
-    String surname2 = scanner1.nextLine();
+    String number2 = JOptionPane.showInputDialog("Please enter Employee 2 Number: ");
 
-    System.out.print("Number2: ");
-    String number2 = scanner1.nextLine();
+    input = JOptionPane.showInputDialog("PLease enter your Employee 2 salary: ");
+    double salary2 = Double.parseDouble(input);
 
-    System.out.print("Salary2: ");
-    Double salary2 = scanner1.nextDouble();
-
-    System.out.print("Salary Increase2 % : ");
-    Double salaryIncrease2 = scanner1.nextDouble();
+    input = JOptionPane.showInputDialog("PLease enter increase percentage: ");
+    double salaryIncrease2 = Double.parseDouble(input);
 
     Employee employee2 = new Employee(name2, surname2, number2, salary2);
-
-    System.out.print(" ");
-    System.out.println("=================Results 2: ===========");
-    System.out.print(" ");
     employee2.increaseSalary(salaryIncrease2);
-    System.out.println(employee2.toString());
 
-    scanner.close();
-    scanner1.close();
+    JOptionPane.showMessageDialog(null, "Employee 1 details: \n"
+        + employee1.toString() +
+        "\nEmployee 2 Details: \n" +
+        employee2.toString());
+
+    System.exit(0);
+
   }
+
 }
