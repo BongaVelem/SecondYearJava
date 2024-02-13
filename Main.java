@@ -13,10 +13,7 @@ public class Main {
 
     Circle circle = new Circle(radius);
 
-    JOptionPane.showMessageDialog(null, "Radius: " + circle.getRadius() +
-        "\nDiameter: " + circle.getDiameter() +
-        "\nCircumference: " + circle.getCircumference() +
-        "\nArea of a Circle: " + circle.getArea());
+    JOptionPane.showMessageDialog(null, circle.toString());
 
     System.exit(0);
   }

@@ -1,36 +1,44 @@
 public class Circle {
-  private double radius;
+  private Double radius;
 
   public Circle() {
 
   }
 
-  public Circle(double radius) {
+  public Circle(Double radius) {
     this.radius = radius;
   }
 
-  public void setRadius(double radius) {
+  public void setRadius(Double radius) {
     this.radius = radius;
 
   }
 
-  public double getRadius() {
+  public Double getRadius() {
     return radius;
 
   }
 
-  public double getDiameter() {
-    return 2 * radius;
+  public Double getDiameter() {
+    return 2 * getRadius();
 
   }
 
-  public double getCircumference() {
-    return 2 * Math.PI * radius;
+  public Double getCircumference() {
+    return 2 * Math.PI * getRadius();
 
   }
 
-  public double getArea() {
-    return Math.PI * Math.pow(radius, 2);
+  public Double getArea() {
+    return Math.PI * Math.pow(getRadius(), 2);
+
+  }
+
+  public String toString() {
+    return "Radius: " + this.getRadius() +
+        "\nDiameter: " + this.getDiameter() +
+        "\nCircumference: " + this.getCircumference() +
+        "\nArea of a Circle: " + this.getArea();
 
   }
 }
