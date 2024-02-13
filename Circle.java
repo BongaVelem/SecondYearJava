@@ -5,31 +5,31 @@ public class Circle {
 
   }
 
-  public Circle(double radius) {
+  public Circle(Double radius) {
     this.radius = radius;
   }
 
-  public void setRadius(double radius) {
+  public void setRadius(Double radius) {
     this.radius = radius;
 
   }
 
-  public double getRadius() {
+  public Double getRadius() {
     return radius;
 
   }
 
-  public double getDiameter() {
+  public Double getDiameter() {
     return 2 * getRadius();
 
   }
 
-  public double getCircumference() {
+  public Double getCircumference() {
     return 2 * Math.PI * getRadius();
 
   }
 
-  public double getArea() {
+  public Double getArea() {
     return Math.PI * Math.pow(getRadius(), 2);
 
   }
